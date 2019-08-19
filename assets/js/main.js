@@ -14,7 +14,7 @@ $(function () {
         loop: true,
         dots: false,
         nav: false,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 6000,
         autoplayHoverPause: true,
         autoHeight: false,

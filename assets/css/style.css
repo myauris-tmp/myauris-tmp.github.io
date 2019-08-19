@@ -291,16 +291,17 @@ img {
     top: 0; }
   .slider-show .slider-show-heading .caption {
     max-width: 450px;
-    text-align: justify; }
+    text-align: justify;
+    float: left; }
     .slider-show .slider-show-heading .caption h4 {
       color: #93268f;
-      font-size: 45pt;
+      font-size: 45px;
       font-weight: 300;
       line-height: 82px;
       text-transform: capitalize; }
       .slider-show .slider-show-heading .caption h4 strong {
         font-weight: 600;
-        font-size: 75pt;
+        font-size: 75px;
         letter-spacing: 3.7px; }
     .slider-show .slider-show-heading .caption .slider-show-info {
       font-size: 16px;
@@ -464,6 +465,7 @@ img {
       top: 100%;
       left: 12%; }
   #main .home-kols .col-left .owl-kols {
+    padding: 0 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px; }

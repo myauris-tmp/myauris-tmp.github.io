@@ -261,15 +261,16 @@ img {
         .caption {
             max-width: 450px;
             text-align: justify;
+            float: left;
             h4 {
                 color: $theme_color;
-                font-size: 45pt;
+                font-size: 45px;
                 font-weight: 300;
                 line-height: 82px;
                 text-transform: capitalize;
                 strong {
                     font-weight: 600;
-                    font-size: 75pt;
+                    font-size: 75px;
                     letter-spacing: 3.7px;
                 }
             }
@@ -459,6 +460,7 @@ img {
                 }
             }
             .owl-kols {
+                padding: 0 15px;
                 @include prefix((border-radius: 5px), webkit moz);
                 .kol-inner {
                     text-align: center;

@@ -34,6 +34,62 @@
 
 }
 
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1349px) {
+    #footer {
+        .footer-bottom {
+            padding: 25px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .slider-show {
+        .slider-show-heading {
+            .slider-show-image {
+                background-position: center top;
+            }
+        }
+    }
+    #main {
+        .home-services {
+            .service-item {
+                margin-bottom: 30px;
+            }
+        }
+        .home-slide {
+            padding: 0 0 30px;
+        }
+        .home-kols {
+            .owl-kols {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    #footer {
+        .footer-top {
+            .col-left {
+                margin-bottom: 30px;
+            }
+            .col-right {
+                .box-info {
+                    .info {
+                        img {
+                            max-width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            padding: 25px 0;
+        }
+    }
+}
+
 @media only screen and (max-width: 991px) {
     #main {
         .home-about {
