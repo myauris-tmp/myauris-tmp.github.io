@@ -1,0 +1,46 @@
+@import "_mixins.scss";
+
+@include responsive_320{
+
+}
+
+@include responsive_375{
+
+}
+
+@include responsive_425{
+
+}
+
+@include responsive_768{
+
+}
+
+@include responsive_992{
+
+}
+
+@include responsive_1024{
+    #main {
+        .home-about {
+            .about-right {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+@include responsive_1200{
+
+}
+
+@media only screen and (max-width: 991px) {
+    #main {
+        .home-about {
+            .about-right {
+                padding-left: 15px;
+                margin-top: 15px;
+            }
+        }
+    }
+}

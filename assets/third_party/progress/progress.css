@@ -1,0 +1,65 @@
+#counter{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    padding: 5px;
+}
+#counter1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    padding: 5px;
+}
+#counter2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    padding: 5px;
+}
+.circle1{
+    height: 170px;
+    width: 170px;
+    background-color:white;
+    border-radius: 50%;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+.shadow-ring{
+    height: 114px;
+    width: 114px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    background: white;
+}
+.circle2{
+    height: 147px;
+    width: 147px;
+    background-color:#BBD9DB;
+    border-radius: 50%;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+
