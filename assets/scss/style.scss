@@ -259,7 +259,7 @@ img {
             top: 0;
         }
         .caption {
-            max-width: 500px;
+            max-width: 450px;
             text-align: justify;
             h4 {
                 color: $theme_color;
@@ -359,6 +359,17 @@ img {
     .home-slide {
         padding-bottom: 60px;
         .owl-slide {
+            .slideshow-img {
+                position: relative;
+                &:before {
+                    @include pseudo();
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, .2);
+                }
+            }
             .owl-dots {
                 margin: 20px 0;
                 .owl-dot {
@@ -440,6 +451,7 @@ img {
                 font-style: italic;
                 @include prefix((border-radius: 50px), webkit moz);
                 @include prefix((box-shadow: 0px 2px 6px 0 $box_shadow_color), webkit moz);
+                min-height: 72px;
                 &:after {
                     @include css-triangle(#e2d2e2, down, 20px);
                     top: 100%;
@@ -447,6 +459,7 @@ img {
                 }
             }
             .owl-kols {
+                @include prefix((border-radius: 5px), webkit moz);
                 .kol-inner {
                     text-align: center;
                     margin: 5px 0;
