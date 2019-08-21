@@ -26,12 +26,10 @@
   #footer .footer-bottom {
     padding: 25px 0; } }
 @media only screen and (max-width: 1024px) {
-  #header .header-main {
-    padding: 0; }
-    #header .header-main .navbar .logo img {
-      max-height: 50px; }
-    #header .header-main .navbar .nav ul li a {
-      margin: 0 5px; }
+  #header .header-main .navbar .logo img {
+    max-height: 50px; }
+  #header .header-main .navbar .nav ul li a {
+    margin: 0 5px; }
 
   .slider-show .slider-show-heading .slider-show-image {
     background-position: center top; }
@@ -52,6 +50,9 @@
   #footer .footer-bottom {
     padding: 25px 0; } }
 @media only screen and (max-width: 991px) {
+  #header .header-main {
+    padding: 0; }
+
   #main .home-about .about-right {
     padding-left: 15px;
     margin-top: 15px; } }

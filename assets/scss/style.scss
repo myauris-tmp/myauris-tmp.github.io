@@ -125,6 +125,9 @@ img {
         border: 1px solid $theme_color;
         @include prefix((border-radius: 50px), webkit moz);
         text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .mburger {
@@ -707,7 +710,7 @@ img {
         }
     }
     .footer-bottom {
-        padding: 50px 0;
+        padding: 25px 0;
         color: #fff;
         font-size: 16px;
     }

@@ -177,6 +177,8 @@ img {
     -moz-border-radius: 50px;
     border-radius: 50px;
     text-transform: uppercase; }
+    .view-more a:hover {
+      text-decoration: none; }
 
 .mburger {
   --mb-button-size: 47px!important;
@@ -655,7 +657,7 @@ img {
         #footer .footer-middle .footer-menu .footer-nav ul li a {
           color: #201E20; }
   #footer .footer-bottom {
-    padding: 50px 0;
+    padding: 25px 0;
     color: #fff;
     font-size: 16px; }
 

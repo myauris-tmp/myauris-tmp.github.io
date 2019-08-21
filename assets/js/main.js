@@ -22,11 +22,14 @@ $(function () {
     // Sticky menu
     var header = $('#header');
     var heightHeader = header.height();
-    console.log(heightHeader);
     $('#site-wrap').css('padding-top', heightHeader);
     $(window).resize(function () {
         var heightHeader = header.height();
-        console.log(heightHeader);
+        $('#site-wrap').css('padding-top', heightHeader);
+    });
+
+    $(window).ready(function () {
+        var heightHeader = header.height();
         $('#site-wrap').css('padding-top', heightHeader);
     });
 
@@ -36,7 +39,7 @@ $(function () {
         loop: true,
         dots: false,
         nav: false,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 6000,
         autoplayHoverPause: true,
         autoHeight: false,
@@ -53,7 +56,7 @@ $(function () {
         items: 1,
         dots: true,
         nav: false,
-        autoplay: false,
+        autoplay: true,
         loop: true,
         lazyLoad: true,
         dotData: true,
