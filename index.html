@@ -55,6 +55,12 @@
     <!--Progress Css-->
     <link rel="preload" href="assets/third_party/progress/progress.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/third_party/progress/progress.css"></noscript>
+    <!--Mmenu-->
+    <link rel="preload" href="assets/third_party/mmenu-js/dist/mmenu.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/third_party/mmenu-js/dist/mmenu.css"></noscript>
+    <!--Hamburger Css-->
+    <link rel="preload" href="assets/third_party/mburger-css/dist/mburger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/third_party/mburger-css/dist/mburger.css"></noscript>
     <!--Main Style-->
     <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
@@ -196,7 +202,7 @@
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
                                 <strong>Địa chỉ:</strong>
-                                <span>11Bis Nguyễn Gia Thiều, P.6, Q.6, HCM</span>
+                                <span>11Bis Nguyễn Gia Thiều, P.6, Q.3, HCM</span>
                             </li>
                             <li>
                                 <i class="far fa-clock"></i>
@@ -215,7 +221,7 @@
                                 <img src="assets/img/logo.png" height="70"/>
                             </div>
 
-                            <div class="nav">
+                            <div class="nav d-none d-lg-block">
                                 <ul>
                                     <li class="active"><a href="/">Trang chủ</a></li>
                                     <li><a href="#">Giới thiệu</a></li>
@@ -243,6 +249,42 @@
                                     <li><a href="#">Tin tức</a></li>
                                     <li><a href="#">Liên hệ</a></li>
                                 </ul>
+                            </div>
+                            <div class="nav-mobile d-block d-lg-none">
+                                <a href="#nav-mobile" class="mburger mburger--squeeze">
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                </a>
+                                <nav id="nav-mobile">
+                                    <ul>
+                                        <li class="active"><a href="/">Trang chủ</a></li>
+                                        <li><a href="#">Giới thiệu</a></li>
+                                        <li class="has-children">
+                                            <a href="#">Dịch vụ</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Danh mục</a></li>
+                                                <li><a href="#">Chi tiết</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="#">Khách hàng</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Danh mục</a></li>
+                                                <li><a href="#">Chi tiết</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-children">
+                                            <a href="#">Kiến thức</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Danh mục</a></li>
+                                                <li><a href="#">Chi tiết</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Tin tức</a></li>
+                                        <li><a href="#">Liên hệ</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </nav>
                     </div>
@@ -774,21 +816,29 @@
                             <div class="footer-nav">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <div class="h5 title">Các bài trước</div>
+                                        <div class="h5 title">Dịch vụ</div>
                                         <ul>
-                                            <li><a href="#">Menu #1</a></li>
-                                            <li><a href="#">Menu #2</a></li>
-                                            <li><a href="#">Menu #3</a></li>
-                                            <li><a href="#">Menu #4</a></li>
+                                            <li><a href="#">Thẩm mỹ</a></li>
+                                            <li><a href="#">Điều trị</a></li>
+                                            <li><a href="#">Cải thiện</a></li>
+                                            <li><a href="#">Phục hồi</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
-                                        <div class="h5 title">Câu hỏi thường gặp</div>
+                                        <div class="h5 title">Công nghệ &amp; Bệnh lý</div>
                                         <ul>
-                                            <li><a href="#">Menu #1</a></li>
-                                            <li><a href="#">Menu #2</a></li>
-                                            <li><a href="#">Menu #3</a></li>
-                                            <li><a href="#">Menu #4</a></li>
+                                            <li><a href="#">Làm răng sứ</a></li>
+                                            <li><a href="#">Bọc răng sứ</a></li>
+                                            <li><a href="#">Phủ răng sứ</a></li>
+                                            <li><a href="#">Dán răng sứ</a></li>
+                                            <li><a href="#">Niềng răng</a></li>
+                                            <li><a href="#">Răng hô</a></li>
+                                            <li><a href="#">Răng móm</a></li>
+                                            <li><a href="#">Răng thưa</a></li>
+                                            <li><a href="#">Răng vàng ố</a></li>
+                                            <li><a href="#">Răng khấp khểnh</a></li>
+                                            <li><a href="#">Mất răng</a></li>
+                                            <li><a href="#">Viêm nướu (lợi)</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-4">
@@ -816,6 +866,8 @@
     <script src="assets/third_party/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/third_party/owl-carousel/owl.carousel.min.js"></script>
     <script src="assets/third_party/progress/progress.js"></script>
+    <script src="assets/third_party/mmenu-js/dist/mmenu.js"></script>
+    <script src="assets/third_party/mmenu-js/src/mmenu.debugger.js"></script>
     <script src="assets/js/lozad.js"></script>
     <script src="assets/js/main.js"></script>
 </body>

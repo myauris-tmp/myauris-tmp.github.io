@@ -178,6 +178,14 @@ img {
     border-radius: 50px;
     text-transform: uppercase; }
 
+.mburger {
+  --mb-button-size: 47px!important;
+  --mb-bar-height: 2px!important;
+  --mb-bar-spacing: 8px!important; }
+
+.mm-wrapper__blocker {
+  z-index: 99 !important; }
+
 #site-wrap {
   position: relative;
   z-index: 99;
@@ -239,8 +247,6 @@ img {
           #header .header-main .navbar .nav ul li a:hover {
             border-bottom: 2px solid #93268f;
             text-decoration: none; }
-        #header .header-main .navbar .nav ul li.has-children > a {
-          padding-right: 20px; }
         #header .header-main .navbar .nav ul li.active > a {
           color: #93268f;
           border-bottom: 2px solid #93268f; }

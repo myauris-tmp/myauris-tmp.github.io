@@ -47,6 +47,18 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    #header {
+        .header-main {
+            padding: 0;
+            .navbar {
+                .logo img {
+                    max-height: 50px;
+                }
+                .nav ul li a {margin: 0 5px;}
+            }
+        }
+    }
+
     .slider-show {
         .slider-show-heading {
             .slider-show-image {
@@ -54,6 +66,7 @@
             }
         }
     }
+
     #main {
         .home-services {
             .service-item {
@@ -66,9 +79,13 @@
         .home-kols {
             .owl-kols {
                 margin-bottom: 30px;
+                .kol-inner .info .name {
+                    font-size: 20px;
+                }
             }
         }
     }
+
     #footer {
         .footer-top {
             .col-left {

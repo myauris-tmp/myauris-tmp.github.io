@@ -8,6 +8,28 @@ $(function () {
     }).observe();
     lozad(".lazy-load-bg", {}).observe();
 
+    // Menu mobile
+    $('#nav-mobile').mmenu({
+        extensions: ["fx-menu-slide", "border-offset", "shadow-page", "position-right", "pagedim-black"],
+        navbar: {title: ''},
+        navbars: [{
+            content: [
+                '<img src="assets/img/logo.png" style="margin:0 auto" />',
+            ],
+        }]
+    });
+
+    // Sticky menu
+    var header = $('#header');
+    var heightHeader = header.height();
+    console.log(heightHeader);
+    $('#site-wrap').css('padding-top', heightHeader);
+    $(window).resize(function () {
+        var heightHeader = header.height();
+        console.log(heightHeader);
+        $('#site-wrap').css('padding-top', heightHeader);
+    });
+
     // Slideshow
     $('.slider-show').owlCarousel({
         items: 1,
@@ -21,8 +43,8 @@ $(function () {
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
         lazyLoad: true,
-        smartSpeed : 900,
-        navSpeed : 900,
+        smartSpeed: 900,
+        navSpeed: 900,
     });
 
     $('.owl-slide').owlCarousel({
@@ -36,8 +58,8 @@ $(function () {
         lazyLoad: true,
         dotData: true,
         dotsData: true,
-        smartSpeed : 900,
-        navSpeed : 900,
+        smartSpeed: 900,
+        navSpeed: 900,
     });
 
     $('.owl-kols').owlCarousel({
@@ -46,15 +68,15 @@ $(function () {
         autoplay: true,
         loop: true,
         lazyLoad: true,
-        smartSpeed : 900,
-        navSpeed : 900,
+        smartSpeed: 900,
+        navSpeed: 900,
         margin: 30,
         autoplayHoverPause: true,
-        responsive:{
-            0:{items:1},
-            600:{items:2},
-            1024:{items:3},
-            1300:{items:3}
+        responsive: {
+            0: {items: 1},
+            600: {items: 2},
+            1024: {items: 3},
+            1300: {items: 3}
         },
         onInitialized: function () {
             var firstEl = $('.owl-kols').find('.owl-item.active').eq(0);
@@ -75,16 +97,16 @@ $(function () {
         autoplay: true,
         loop: true,
         lazyLoad: true,
-        smartSpeed : 900,
-        navSpeed : 900,
+        smartSpeed: 900,
+        navSpeed: 900,
         margin: 30,
         autoplayHoverPause: true,
         center: true,
-        responsive:{
-            0:{items:1},
-            600:{items:2},
-            1024:{items:3},
-            1300:{items:4}
+        responsive: {
+            0: {items: 1},
+            600: {items: 2},
+            1024: {items: 3},
+            1300: {items: 4}
         },
         onInitialized: function () {
             var el = $('.owl-item.center');
@@ -104,13 +126,13 @@ $(function () {
         autoplay: true,
         loop: true,
         lazyLoad: true,
-        smartSpeed : 900,
-        navSpeed : 900,
-        responsive:{
-            0:{items:1},
-            600:{items:2},
-            1024:{items:3},
-            1300:{items:3}
+        smartSpeed: 900,
+        navSpeed: 900,
+        responsive: {
+            0: {items: 1},
+            600: {items: 2},
+            1024: {items: 3},
+            1300: {items: 3}
         }
     });
 })

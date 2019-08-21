@@ -26,6 +26,13 @@
   #footer .footer-bottom {
     padding: 25px 0; } }
 @media only screen and (max-width: 1024px) {
+  #header .header-main {
+    padding: 0; }
+    #header .header-main .navbar .logo img {
+      max-height: 50px; }
+    #header .header-main .navbar .nav ul li a {
+      margin: 0 5px; }
+
   .slider-show .slider-show-heading .slider-show-image {
     background-position: center top; }
 
@@ -35,6 +42,8 @@
     padding: 0 0 30px; }
   #main .home-kols .owl-kols {
     margin-bottom: 30px; }
+    #main .home-kols .owl-kols .kol-inner .info .name {
+      font-size: 20px; }
 
   #footer .footer-top .col-left {
     margin-bottom: 30px; }
