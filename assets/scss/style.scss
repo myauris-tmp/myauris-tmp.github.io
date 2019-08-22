@@ -187,7 +187,152 @@ img {
         .navbar {
             width: 100%;
             z-index: 2;
-            .nav ul li {
+            .nav {position: relative;}
+            .nav > ul > li {
+                float: left;
+                display: block;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                > a {
+                    display: block;
+                    position: relative;
+                    padding: 20px 5px;
+                    margin: 0 10px;
+                    font-size: 16px;
+                    color: $text_color;
+                    text-transform: uppercase;
+                    border-bottom: 2px solid transparent;
+                    > i {
+                        display: inline-block;
+                        font-size: 14px;
+                        line-height: inherit;
+                        margin-right: 12px;
+                        color: #55606c;
+                        vertical-align: middle;
+                    }
+                }
+                &:hover > a {
+                    color: $theme_color;
+                    border-bottom: 2px solid $theme_color;
+                    text-decoration: none;
+                }
+                &.active > a {
+                    color: $theme_color;
+                    border-bottom: 2px solid $theme_color;
+                    text-decoration: none;
+                }
+                > ul.sub-menu {
+                    position: absolute;
+                    top: 70px;
+                    z-index: 1;
+                    margin: 0;
+                    padding: 0;
+                    min-width: 190px;
+                    background-color: #fff;
+                    border: 1px solid #eee;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include prefix((transition: all .3s ease-in-out), webkit moz ms o);
+                    @include prefix((transform-origin: 0% 0%), webkit moz ms o);
+                    @include prefix((transform-style: preserve-3d), webkit moz o);
+                    @include prefix((transform: rotateX(-75deg)), webkit moz o);
+                    > li {
+                        position: relative;
+                        margin: 0;
+                        padding: 0;
+                        display: block;
+                        > a {
+                            background-image: none;
+                            color: #666;
+                            text-align: left;
+                            display: block;
+                            line-height: 22px;
+                            padding: 8px 12px;
+                            text-transform: none;
+                            font-size: 14px;
+                            letter-spacing: normal;
+                            border-right: 0px solid;
+                            @include prefix((transition: all .3s ease-in-out), webkit moz);
+                            > i {
+                                margin-right: 9px;
+                            }
+                        }
+                        &:hover > a {
+                            background-color: $theme_color;
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+                &:hover > ul.sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    @include prefix((transform: rotateX(0deg)), webkit moz o);
+                }
+                > .mega-menu {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 70px;
+                    color: #000;
+                    //z-index: 1000;
+                    margin: 0;
+                    text-align: left;
+                    padding: 14px 5px;
+                    font-size: 15px;
+                    border: solid 1px #eeeeee;
+                    background-color: #fff;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include prefix((transition: all .3s ease-in-out), webkit moz o);
+                    @include prefix((transform-origin: 0% 0%), webkit moz ms o);
+                    @include prefix((transform-style: preserve-3d), webkit);
+                    @include prefix((transform: rotateX(-75deg)), webkit moz o);
+                    &.half-menu {
+                        width: 50%;
+                        right: auto;
+                        left: auto;
+                    }
+                    .title {
+                        border-bottom: 1px solid #CCC;
+                        padding: 9px 5px 9px 0;
+                        font-size: 17px;
+                        color: #424242;
+                        margin: 0 0 7px 0;
+                        height: 39px;
+                    }
+                    .link-list li {
+                        display: block;
+                        white-space: nowrap;
+                        text-align: left;
+                        a {
+                            line-height: 18px;
+                            border-right: none;
+                            text-align: left;
+                            padding: 6px 0;
+                            border-right: 0 none;
+                            display: block;
+                            background-color: #fff;
+                            color: #424242;
+                            font-size: 13px;
+                            i {
+                                margin-right: 5px;
+                                text-align: center;
+                                width: 18px;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+                &:hover > .mega-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    @include prefix((transform: rotateX(0deg)), webkit moz o);
+                }
+            }
+            /*.nav ul li {
                 float: left;
                 position: relative;
                 a {
@@ -246,7 +391,7 @@ img {
                         }
                     }
                 }
-            }
+            }*/
         }
     }
 }
@@ -259,7 +404,7 @@ img {
         padding: 105px 15px 0;
         text-align: left;
         .slider-show-image {
-            background-position: right top;
+            background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
@@ -697,14 +842,11 @@ img {
         }
         .footer-menu {
             .footer-nav {
-                ul {
-                    padding-left: 40px;
-                    li {
-                        list-style: disc;
-                        a {
-                            color: $text_color;
-                        }
-                    }
+                .title {
+                    font-weight: 600;
+                }
+                ul li a {
+                    color: $text_color;
                 }
             }
         }

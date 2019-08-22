@@ -22,17 +22,23 @@
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
   #main .home-about .about-right {
     padding-left: 15px; } }
+@media only screen and (min-width: 1200px) {
+  #footer .footer-top .box-video .embed-responsive-4by3::before {
+    padding-top: 88%; } }
 @media only screen and (min-width: 1024px) and (max-width: 1349px) {
   #footer .footer-bottom {
     padding: 25px 0; } }
 @media only screen and (max-width: 1024px) {
-  #header .header-main .navbar .logo img {
-    max-height: 50px; }
-  #header .header-main .navbar .nav ul li a {
-    margin: 0 5px; }
-
-  .slider-show .slider-show-heading .slider-show-image {
-    background-position: center top; }
+  #header .header-main {
+    padding: 0; }
+    #header .header-main .navbar .logo img {
+      max-height: 50px; }
+    #header .header-main .navbar .nav > ul > li > a {
+      font-size: 14px; }
+      #header .header-main .navbar .nav > ul > li > a > i {
+        vertical-align: top; }
+    #header .header-main .navbar .nav ul li a {
+      margin: 0 5px; }
 
   #main .home-services .service-item {
     margin-bottom: 30px; }
@@ -56,5 +62,9 @@
   #main .home-about .about-right {
     padding-left: 15px;
     margin-top: 15px; } }
+@media only screen and (max-width: 768px) {
+  #footer .footer-top .col-left {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /*# sourceMappingURL=responsive.css.map */
