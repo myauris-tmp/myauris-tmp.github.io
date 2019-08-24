@@ -1,3 +1,4 @@
+@import "_variables.scss";
 @import "_mixins.scss";
 
 @include responsive_320 {
@@ -49,20 +50,28 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    .page-breadcrumb {
+        padding: 30px 0;
+    }
+
     #header {
         .header-main {
             padding: 0;
+
             .navbar {
                 .logo img {
                     max-height: 50px;
                 }
+
                 .nav {
-                    >ul >li >a {
+                    > ul > li > a {
                         font-size: 14px;
-                        >i {
+
+                        > i {
                             vertical-align: top;
                         }
                     }
+
                     ul li a {
                         margin: 0 5px;
                     }
@@ -89,6 +98,54 @@
                 .kol-inner .info .name {
                     font-size: 20px;
                 }
+            }
+        }
+
+        .about-us-wrap {
+            .about-us .content-column .inner-column {
+                padding-left: 30px;
+
+                h2, h3.title {
+                    font-size: 46px;
+                }
+            }
+
+            .booking .booking-left .inner-column {
+                h3.title {
+                    font-size: 46px;
+                }
+
+                .booking-form {
+                    .form-title {
+                        font-size: 18px;
+                    }
+
+                    .regis .inner .btn-primary {
+                        padding: 10px;
+                        background-position: 10px;
+                    }
+
+                    .info .inner ul li {
+                        &:first-child {
+                            margin-bottom: 10px;
+                        }
+
+                        i {
+                            width: 24px;
+                            height: 24px;
+                            line-height: 24px;
+                            margin-right: 5px;
+                        }
+
+                        strong {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .wts-map .wts-content .wts-c-step .wts-c-heading {
+                font-size: 18px;
             }
         }
     }
@@ -130,12 +187,154 @@
                 margin-top: 15px;
             }
         }
+
+        .about-us-wrap {
+            .about-us {
+                padding-bottom: 0;
+
+                .content-column .inner-column {
+                    padding-left: 0;
+                }
+            }
+
+            .booking .booking-right {
+                display: none;
+            }
+
+            .wts-map {
+                .wts-heading {
+                    margin-bottom: 30px;
+
+                    .line-no-arrow, .line-has-arrow {
+                        display: none !important;
+                    }
+                }
+
+                .wts-content .col-lg-3 {
+                    margin-bottom: 30px;
+
+                    .wts-c-step {
+                        &:before, &:after {
+                            @include pseudo;
+                            left: 50%;
+                            bottom: 100%;
+                        }
+
+                        &:before {
+                            width: 2px;
+                            height: 28px !important;
+                            background: #fff;
+                            @include prefix((transform: translateX(-50%) translateY(-2px)), webkit moz);
+                        }
+
+                        &:after {
+                            width: 0;
+                            height: 0;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-top: 10px solid #fff;
+                            transform: translateX(-50%);
+                        }
+
+                        &.active:after {
+                            border-top-color: $theme_color_two;
+                        }
+
+                        .arrow-right {
+                            display: none;
+                        }
+
+                        .wts-c-heading {
+                            font-size: 22px;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                        .wts-c-step:before {
+                            display: block;
+                        }
+                    }
+                }
+
+                &.expand-only.step4 .wts-heading .wts-main-heading:after {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .page-breadcrumb h1 {
+        font-size: 46px;
+    }
+    #main .about-us-wrap .booking .booking-left .inner-column .booking-form {
+        .logo .inner {
+            padding: 0 !important;
+            text-align: center;
+        }
+    }
+
     #footer .footer-top .col-left {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .page-breadcrumb {
+        &:before {
+            @include pseudo;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, .5);
+        }
+
+        .container {
+            position: relative;
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+
+    #main .about-us-wrap {
+        .booking {
+            .booking-left .inner-column h3.title {
+                font-size: 32px;
+            }
+
+            .booking-form {
+                .form-group > div, .regis, .info {
+                    margin-bottom: 15px;
+                }
+
+                .logo .inner {
+                    padding: 0 !important;
+                }
+            }
+        }
+        .wts-map {
+            padding-top: 30px;
+            padding-bottom: 30px
+        }
+    }
+
+    #footer {
+        .footer-middle {
+            padding: 30px 0;
+            .footer-info {
+                .info, .social {
+                    max-width: 100%;
+                }
+            }
+            .footer-nav {
+                margin-top: 15px
+            }
+        }
     }
 }

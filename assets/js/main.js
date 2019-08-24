@@ -138,4 +138,50 @@ $(function () {
             1300: {items: 3}
         }
     });
+
+    $('.wts-nav-collapse').slideUp();
+    $('body').on('click', '.expand-all', function(){
+        if ($('.wts-map').hasClass('expand')) {
+            $('.wts-map').removeClass('expand').removeClass(function (index, className) {
+                return (className.match (/(^|\s)step\S+/g) || []).join(' ');
+            });
+            $('.wts-c-step').removeClass('active');
+            $('.wts-nav-collapse').removeClass('opened').slideUp();
+            $('.wts-map').addClass('expand-only');
+        } else {
+            $('.wts-map').addClass('expand');
+            $('.wts-map').removeClass('expand-only');
+            $('.wts-c-step').addClass('active');
+            $('.wts-nav-collapse').addClass('opened').slideDown();
+            $('body').on('click', '.wts-c-step', function() {
+                var elTarget = $(this).data('target');
+                $('.wts-c-step').removeClass('active');
+                $(this).addClass('active');
+                if ($(elTarget).hasClass('opened')) {
+                    $('.wts-nav-collapse').not(elTarget).removeClass('opened').slideUp();
+                } else {
+                    $('.wts-nav-collapse').removeClass('opened').slideUp();
+                    $(elTarget).addClass('opened').slideDown();
+                }
+            });
+        }
+    }).on('click', '.wts-c-step', function() {
+        var elTarget = $(this).data('target');
+        var clsCustom = elTarget.replace('#', '');
+        $('.wts-map').removeClass('expand').addClass('expand-only');
+        var arrClass = $('.wts-map').attr('class').split(' ');
+        $('.wts-map').attr('class', $.map(arrClass, function(val) {
+            return val.includes('step') !== false ? null : val;
+        }).join(' ')).addClass(clsCustom);
+        $('.wts-c-step').removeClass('active');
+        $('.wts-c-step').removeClass('active');
+        $(this).addClass('active');
+
+        if ($(elTarget).hasClass('opened')) {
+
+        } else {
+            $('.wts-nav-collapse').removeClass('opened').slideUp();
+            $(elTarget).addClass('opened').slideDown();
+        }
+    });
 })
