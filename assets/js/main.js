@@ -140,20 +140,22 @@ $(function () {
     });
 
     $('.wts-nav-collapse').slideUp();
-    $('body').on('click', '.expand-all', function(){
+    $('body').on('click', '.expand-all', function () {
         if ($('.wts-map').hasClass('expand')) {
+            $('.expand-all').html('Xem tất cả');
             $('.wts-map').removeClass('expand').removeClass(function (index, className) {
-                return (className.match (/(^|\s)step\S+/g) || []).join(' ');
+                return (className.match(/(^|\s)step\S+/g) || []).join(' ');
             });
             $('.wts-c-step').removeClass('active');
             $('.wts-nav-collapse').removeClass('opened').slideUp();
             $('.wts-map').addClass('expand-only');
         } else {
+            $('.expand-all').html('Đóng tất cả');
             $('.wts-map').addClass('expand');
             $('.wts-map').removeClass('expand-only');
             $('.wts-c-step').addClass('active');
             $('.wts-nav-collapse').addClass('opened').slideDown();
-            $('body').on('click', '.wts-c-step', function() {
+            $('body').on('click', '.wts-c-step', function () {
                 var elTarget = $(this).data('target');
                 $('.wts-c-step').removeClass('active');
                 $(this).addClass('active');
@@ -165,12 +167,12 @@ $(function () {
                 }
             });
         }
-    }).on('click', '.wts-c-step', function() {
+    }).on('click', '.wts-c-step', function () {
         var elTarget = $(this).data('target');
         var clsCustom = elTarget.replace('#', '');
         $('.wts-map').removeClass('expand').addClass('expand-only');
         var arrClass = $('.wts-map').attr('class').split(' ');
-        $('.wts-map').attr('class', $.map(arrClass, function(val) {
+        $('.wts-map').attr('class', $.map(arrClass, function (val) {
             return val.includes('step') !== false ? null : val;
         }).join(' ')).addClass(clsCustom);
         $('.wts-c-step').removeClass('active');
