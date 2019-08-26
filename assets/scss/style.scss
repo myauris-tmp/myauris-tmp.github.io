@@ -255,7 +255,6 @@ img {
     }
 
     .header-main {
-        padding: 10px 20px;
         background-color: #fff;
         box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .1);
         @include prefix((transition: all .5s ease-in-out), webkit moz o);
@@ -282,7 +281,7 @@ img {
                 > a {
                     display: block;
                     position: relative;
-                    padding: 20px 5px;
+                    padding: 10px 5px;
                     margin: 0 10px;
                     font-size: 16px;
                     color: $text_color;
@@ -525,13 +524,14 @@ img {
         }
 
         .about-right {
-            padding-left: 100px;
+            padding-left: 30px;
 
             .about-title {
                 font-weight: 600;
                 font-size: 24px;
                 text-transform: uppercase;
                 color: $theme_color;
+                margin-bottom: 10px;
 
                 strong {
                     font-size: 64px;
@@ -541,7 +541,11 @@ img {
 
             .about-text {
                 text-align: justify;
-                margin-bottom: 45px;
+                margin-bottom: 20px;
+            }
+
+            .view-more {
+                float: right;
             }
         }
     }

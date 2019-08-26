@@ -240,7 +240,6 @@ img {
         #header .header-top .navbar-top ul.info li span {
           margin-left: 4px; }
   #header .header-main {
-    padding: 10px 20px;
     background-color: #fff;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.5s ease-in-out;
@@ -266,7 +265,7 @@ img {
         #header .header-main .navbar .nav > ul > li > a {
           display: block;
           position: relative;
-          padding: 20px 5px;
+          padding: 10px 5px;
           margin: 0 10px;
           font-size: 16px;
           color: #201E20;
@@ -469,18 +468,21 @@ img {
   -moz-box-shadow: 0 2px 6px 0 #d6d6d6;
   box-shadow: 0 2px 6px 0 #d6d6d6; }
 #main .home-about .about-right {
-  padding-left: 100px; }
+  padding-left: 30px; }
   #main .home-about .about-right .about-title {
     font-weight: 600;
     font-size: 24px;
     text-transform: uppercase;
-    color: #93268f; }
+    color: #93268f;
+    margin-bottom: 10px; }
     #main .home-about .about-right .about-title strong {
       font-size: 64px;
       text-transform: capitalize; }
   #main .home-about .about-right .about-text {
     text-align: justify;
-    margin-bottom: 45px; }
+    margin-bottom: 20px; }
+  #main .home-about .about-right .view-more {
+    float: right; }
 #main .home-best-thing {
   padding-top: 0; }
 #main .home-services {
