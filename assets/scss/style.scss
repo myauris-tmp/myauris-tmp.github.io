@@ -418,19 +418,19 @@ img {
 
                     &:not(.half-menu) .link-list {
                         &:nth-child(1) .title {
-                            color: #fbae17;
-                        }
-
-                        &:nth-child(2) .title {
                             color: #b47bc9;
                         }
 
+                        &:nth-child(2) .title {
+                            color: #a9dae8;
+                        }
+
                         &:nth-child(3) .title {
-                            color: #b5efce;
+                            color: #fbae17;
                         }
 
                         &:nth-child(4) .title {
-                            color: #a9dae8;
+                            color: #b5efce;
                         }
                     }
 
@@ -609,19 +609,19 @@ img {
             }
 
             &:nth-child(1) .title {
-                color: #fbae17;
-            }
-
-            &:nth-child(2) .title {
                 color: #b47bc9;
             }
 
+            &:nth-child(2) .title {
+                color: #a9dae8;
+            }
+
             &:nth-child(3) .title {
-                color: #b5efce;
+                color: #fbae17;
             }
 
             &:nth-child(4) .title {
-                color: #a9dae8;
+                color: #b5efce;
             }
         }
     }
