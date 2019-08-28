@@ -270,6 +270,11 @@
     .page-breadcrumb h1 {
         font-size: 46px;
     }
+
+    #header .header-top .container {
+        display: none;
+    }
+
     #main .about-us-wrap .booking .booking-left .inner-column .booking-form {
         .logo .inner {
             padding: 0 !important;
@@ -302,25 +307,31 @@
         }
     }
 
-    #main .about-us-wrap {
-        .booking {
-            .booking-left .inner-column h3.title {
-                font-size: 32px;
+    #main {
+        .about-us-wrap {
+            .booking {
+                .booking-left .inner-column h3.title {
+                    font-size: 32px;
+                }
+
+                .booking-form {
+                    .form-group > div, .regis, .info {
+                        margin-bottom: 15px;
+                    }
+
+                    .logo .inner {
+                        padding: 0 !important;
+                    }
+                }
             }
-
-            .booking-form {
-                .form-group > div, .regis, .info {
-                    margin-bottom: 15px;
-                }
-
-                .logo .inner {
-                    padding: 0 !important;
-                }
+            .wts-map {
+                padding-top: 30px;
+                padding-bottom: 30px
             }
         }
-        .wts-map {
-            padding-top: 30px;
-            padding-bottom: 30px
+
+        .home-customers .owl-customers .customer-inner {
+            margin: 0 15px;
         }
     }
 

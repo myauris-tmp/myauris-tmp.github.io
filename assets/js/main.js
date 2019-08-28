@@ -22,6 +22,23 @@ $(function () {
     // Sticky menu
     var header = $('#header');
     var heightHeader = header.height();
+    var headerPosition = header.offset().top;
+    if ($(window).width() >= 768) {
+        if (headerPosition > heightHeader) {
+            header.addClass('sticky');
+        } else {
+            header.removeClass('sticky');
+        }
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > heightHeader) {
+                header.addClass('sticky').find('.header-top').children('.container').slideUp(400);
+            } else {
+                header.removeClass('sticky').find('.header-top').children('.container').slideDown(400);
+            }
+        });
+    }
+
     $('#site-wrap').css('padding-top', heightHeader);
     $(window).resize(function () {
         var heightHeader = header.height();

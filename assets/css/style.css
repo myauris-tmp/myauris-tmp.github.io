@@ -249,6 +249,8 @@ img {
     #header .header-main .navbar {
       width: 100%;
       z-index: 2; }
+      #header .header-main .navbar .logo img {
+        max-height: 60px; }
       #header .header-main .navbar .nav {
         position: relative; }
         #header .header-main .navbar .nav a {
@@ -452,7 +454,6 @@ img {
       color: #93268f;
       font-size: 45px;
       font-weight: 300;
-      line-height: 82px;
       text-transform: capitalize; }
       .slider-show .slider-show-heading .caption h4 strong {
         font-weight: 600;
