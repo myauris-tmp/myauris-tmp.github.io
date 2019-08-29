@@ -945,6 +945,89 @@ img {
         }
     }
 
+    .booking {
+        @extend %section;
+
+        .booking-left .inner-column {
+            h3.title {
+                font-size: 55px;
+                color: $theme_color;
+                text-transform: capitalize;
+            }
+
+            .content {
+                text-align: justify;
+            }
+
+            .booking-form {
+                padding: 20px;
+                margin-top: 30px;
+                background: transparent url("../img/bg-customers.jpg") left top repeat;
+                @include prefix((border-radius: 10px), webkit moz);
+
+                .form-title {
+                    color: #fff;
+                    font-size: 22px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .form-control {
+                    @include prefix((box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4)), webkit moz);
+                }
+
+                .btn-primary {
+                    width: 100%;
+                    background-color: $theme_color_two;
+                    border-color: $theme_color_two;
+                    @include prefix((box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4)), webkit moz);
+                }
+
+                .regis .inner .btn-primary {
+                    background: $theme_color_two url("../img/edit.png") 20px no-repeat;
+                    padding: 20px;
+                    text-align: end;
+                    text-transform: uppercase;
+                }
+
+                .info .inner ul li {
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 15px;
+
+                    &:first-child {
+                        margin-bottom: 30px;
+                    }
+
+                    i {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        color: $theme_color;
+                        background-color: #fff;
+                        font-size: 12px;
+                        @include prefix((border-radius: 100%), webkit moz);
+                        margin-right: 10px;
+                    }
+
+                    strong {
+                        margin-right: 15px;
+                    }
+                }
+
+                .logo .inner {
+                    padding: 18px 0;
+                }
+            }
+        }
+
+        .booking-right {
+        }
+    }
+
     .about-us-wrap {
         .about-us {
             @extend %section;
@@ -1068,89 +1151,6 @@ img {
                         text-transform: capitalize;
                     }
                 }
-            }
-        }
-
-        .booking {
-            @extend %section;
-
-            .booking-left .inner-column {
-                h3.title {
-                    font-size: 55px;
-                    color: $theme_color;
-                    text-transform: capitalize;
-                }
-
-                .content {
-                    text-align: justify;
-                }
-
-                .booking-form {
-                    padding: 20px;
-                    margin-top: 30px;
-                    background: transparent url("../img/bg-customers.jpg") left top repeat;
-                    @include prefix((border-radius: 10px), webkit moz);
-
-                    .form-title {
-                        color: #fff;
-                        font-size: 22px;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        text-align: center;
-                        margin-bottom: 20px;
-                    }
-
-                    .form-control {
-                        @include prefix((box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4)), webkit moz);
-                    }
-
-                    .btn-primary {
-                        width: 100%;
-                        background-color: $theme_color_two;
-                        border-color: $theme_color_two;
-                        @include prefix((box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4)), webkit moz);
-                    }
-
-                    .regis .inner .btn-primary {
-                        background: $theme_color_two url("../img/edit.png") 20px no-repeat;
-                        padding: 20px;
-                        text-align: end;
-                        text-transform: uppercase;
-                    }
-
-                    .info .inner ul li {
-                        color: #fff;
-                        font-weight: 600;
-                        font-size: 15px;
-
-                        &:first-child {
-                            margin-bottom: 30px;
-                        }
-
-                        i {
-                            width: 30px;
-                            height: 30px;
-                            line-height: 30px;
-                            text-align: center;
-                            color: $theme_color;
-                            background-color: #fff;
-                            font-size: 12px;
-                            @include prefix((border-radius: 100%), webkit moz);
-                            margin-right: 10px;
-                        }
-
-                        strong {
-                            margin-right: 15px;
-                        }
-                    }
-
-                    .logo .inner {
-                        padding: 18px 0;
-                    }
-                }
-            }
-
-            .booking-right {
             }
         }
 
@@ -1390,6 +1390,144 @@ img {
 
                 &.step1 .wts-content .col-lg-3:first-child .wts-c-step:after {
                     border-top-color: $theme_color_two;
+                }
+            }
+        }
+    }
+
+    .services-wrap {
+        .services {
+            @extend %section;
+
+            .nav {
+                border-bottom: 1px solid #ddd;
+
+                .nav-item {
+                    .nav-link {
+                        img {
+                            display: block;
+                            margin: 0 auto 15px;
+                        }
+
+                        h5 {
+                            font-weight: 700;
+                            color: $theme_color;
+                        }
+
+                        &.active {
+                            border-bottom: 3px solid $theme_color;
+                        }
+                    }
+
+                    &:nth-child(1) h5 {
+                        color: #b47bc9;
+                    }
+
+                    &:nth-child(2) h5 {
+                        color: #a9dae8;
+                    }
+
+                    &:nth-child(3) h5 {
+                        color: #fbae17;
+                    }
+
+                    &:nth-child(4) h5 {
+                        color: #b5efce;
+                    }
+                }
+            }
+
+            .tab-content {
+                padding-top: 60px;
+
+                .inner {
+                    text-align: center;
+
+                    .title {
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .expert {
+            @extend %section;
+
+            .title {
+                @extend %title;
+            }
+
+            .subtitle {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .item {
+                margin: 10px;
+                @include prefix((box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, .3)), webkit moz);
+
+                .info {
+                    padding: 15px;
+                    text-align: center;
+                    color: $theme_color;
+                    font-size: 16px;
+
+                    .name {
+                        margin-bottom: 10px;
+                    }
+
+                    .position {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .faq {
+            @extend %section;
+
+            .title {
+                @extend %title;
+            }
+
+            .subtitle {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .md-accordion .card {
+                font-weight: 400;
+                overflow: visible;
+                box-shadow: none;
+                border: 0;
+                border-bottom: 1px solid #e0e0e0;
+                border-radius: 0;
+
+                &:first-of-type, &:not(:first-of-type):not(:last-of-type) {
+                    border-bottom: 1px solid #e0e0e0;
+                }
+
+                .card-header {
+                    border-bottom: 0;
+                    padding: 1rem 1.5rem;
+                    background: 0 0;
+
+                    a {
+                        @include prefix((transition: all .3s ease-in-out), webkit moz ms o);
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+
+                        h5 {
+                            font-family: 'HelveticalNeue', sans-serif;
+                        }
+                    }
+                }
+
+                .fa-angle-down {
+                    float: right;
                 }
             }
         }

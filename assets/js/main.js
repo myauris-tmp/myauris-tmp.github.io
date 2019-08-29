@@ -156,6 +156,24 @@ $(function () {
         }
     });
 
+    $('.owl-expert').owlCarousel({
+        autoplay: true,
+        loop: true,
+        lazyLoad: true,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+        smartSpeed: 900,
+        navSpeed: 900,
+        margin: 20,
+        responsive: {
+            0: {items: 1},
+            600: {items: 2},
+            1024: {items: 3},
+            1300: {items: 3}
+        }
+    });
+
     $('.wts-nav-collapse').slideUp();
     $('body').on('click', '.expand-all', function () {
         if ($('.wts-map').hasClass('expand')) {
