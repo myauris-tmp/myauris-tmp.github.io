@@ -365,7 +365,7 @@ img {
           position: absolute;
           width: 100%;
           left: 0;
-          top: 70px;
+          top: 60px;
           color: #000;
           margin: 0;
           text-align: left;
@@ -1346,6 +1346,82 @@ img {
   #main .customers-wrap .thanks-from-ma .text {
     max-width: 750px;
     margin: 0 auto; }
+#main .contact-wrap .about-us {
+  padding: 60px 0; }
+  #main .contact-wrap .about-us .text {
+    z-index: 1; }
+    #main .contact-wrap .about-us .text .inner {
+      padding: 80px 40px;
+      -webkit-box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.5); }
+      #main .contact-wrap .about-us .text .inner .h2, #main .contact-wrap .about-us .text .inner .h3 {
+        font-weight: 700;
+        color: #93268f;
+        text-transform: uppercase; }
+      #main .contact-wrap .about-us .text .inner .h2 {
+        font-size: 44px; }
+      #main .contact-wrap .about-us .text .inner .h3 {
+        font-size: 30px; }
+      #main .contact-wrap .about-us .text .inner .desc {
+        text-align: justify; }
+        #main .contact-wrap .about-us .text .inner .desc p.lead {
+          font-weight: 700;
+          font-size: 16px;
+          color: #93268f;
+          text-transform: uppercase; }
+#main .contact-wrap .address {
+  border-right: 1px solid #fcd3e1;
+  margin-bottom: 100px; }
+  #main .contact-wrap .address .row-address {
+    color: #7a7992;
+    font-size: 13px;
+    padding: 40px 0;
+    border-bottom: 1px solid #fcd3e1; }
+    #main .contact-wrap .address .row-address:first-child {
+      padding-top: 0; }
+    #main .contact-wrap .address .row-address:last-child {
+      padding-bottom: 0;
+      border-bottom: 0; }
+  #main .contact-wrap .address .title, #main .contact-wrap .address .info > .h6, #main .contact-wrap .address i.fas {
+    color: #93268f; }
+  #main .contact-wrap .address .title {
+    font: 700 30px "UTM-Duepuntozero", sans-serif;
+    margin-bottom: 45px;
+    text-align: center; }
+  #main .contact-wrap .address .info > .h6 {
+    font-weight: 600;
+    font-size: 24px; }
+  #main .contact-wrap .address .info p {
+    margin-bottom: 10px; }
+    #main .contact-wrap .address .info p i {
+      margin-right: 10px; }
+    #main .contact-wrap .address .info p a {
+      font-weight: 600;
+      color: #f5518a; }
+  #main .contact-wrap .address .info ul li.lead.h6 {
+    font-size: 24px;
+    color: #7a7992;
+    margin-bottom: 10px; }
+  #main .contact-wrap .address .info a.btn {
+    display: inline-block;
+    background-color: #f5518a;
+    color: #fff;
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3); }
+    #main .contact-wrap .address .info a.btn.btn-hotline {
+      font-size: 14px; }
+      #main .contact-wrap .address .info a.btn.btn-hotline > i.fas {
+        color: #fff;
+        margin-right: 5px; }
+    #main .contact-wrap .address .info a.btn.btn-regis {
+      background: #f5518a url("../img/edit.png") 10px center/26px no-repeat;
+      padding-left: 40px;
+      margin-left: 20px;
+      font-size: 10px;
+      text-transform: uppercase; }
 
 #footer {
   background-color: #93268f;
@@ -1413,5 +1489,13 @@ img {
     padding: 25px 0;
     color: #fff;
     font-size: 16px; }
+
+@media only screen and (max-width: 480px) {
+  #main .home-about, #main .home-best-thing, #main .home-services, #main .home-kols, #main .home-customers, #main .home-progress, #main .home-news, #main .booking, #main .about-us-wrap .about-us, #main .services-wrap .services, #main .services-wrap .expert, #main .services-wrap .faq, #main .customers-wrap .thumbnail, #main .customers-wrap .list-customers, #main .customers-wrap .testimonial, #main .customers-wrap .thanks-from-ma {
+    padding: 30px 0; }
+
+  #main .home-best-thing .best-thing-title, #main .home-services .services-title, #main .home-kols .col-left .title, #main .home-customers .customer-title, #main .home-news .home-news-title, #main .services-wrap .expert .title, #main .services-wrap .faq .title, #main .customers-wrap .testimonial .title, #main .customers-wrap .testimonial .text .inner .name, #main .customers-wrap .thanks-from-ma .title {
+    font-size: 36px;
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

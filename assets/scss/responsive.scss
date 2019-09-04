@@ -271,6 +271,12 @@
         font-size: 46px;
     }
 
+    #nav-mobile .mm-navbars_top .mm-navbar img {
+        max-height: 48px;
+        padding: 0;
+        margin: 12px auto !important;
+    }
+
     #header .header-top .container {
         display: none;
     }
@@ -282,9 +288,15 @@
         }
     }
 
-    #footer .footer-top .col-left {
-        padding-left: 0;
-        padding-right: 0;
+    #footer {
+        .footer-top .col-left {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .footer-middle .footer-menu {
+            margin-top: 15px;
+        }
     }
 }
 
@@ -301,6 +313,7 @@
 
         .container {
             position: relative;
+
             h1 {
                 font-size: 36px;
             }
@@ -324,6 +337,7 @@
                     }
                 }
             }
+
             .wts-map {
                 padding-top: 30px;
                 padding-bottom: 30px
@@ -333,18 +347,73 @@
         .home-customers .owl-customers .customer-inner {
             margin: 0 15px;
         }
+
+        .services-wrap .services {
+            .nav {
+                .nav-item {
+                    text-align: left !important;
+
+                    .nav-link {
+                        padding-left: 0;
+                        margin-bottom: 15px;
+
+                        h5 {
+                            margin: 0
+                        }
+
+                        img {
+                            margin: 0 10px 0 0;
+                            float: left;
+                            max-width: 20px;
+                        }
+                    }
+                }
+            }
+
+            .tab-content {
+                padding-top: 20px;
+
+                .inner {
+                    margin-bottom: 20px;
+
+                    .title {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        .customers-wrap {
+            .thumbnail {
+                padding-top: 0;
+            }
+        }
+
+        .left-sidebar {
+            margin-bottom: 30px;
+        }
     }
 
     #footer {
         .footer-middle {
             padding: 30px 0;
+
             .footer-info {
                 .info, .social {
                     max-width: 100%;
                 }
             }
+
             .footer-nav {
-                margin-top: 15px
+                margin-top: 15px;
+
+                .col-md-4 {
+                    margin-bottom: 20px;
+
+                    .title {
+                        margin-bottom: 10px;
+                    }
+                }
             }
         }
     }

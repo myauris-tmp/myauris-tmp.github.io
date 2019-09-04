@@ -120,6 +120,7 @@ img {
         .name {
             margin: 10px 0;
             font: 700 18px "UTM-Duepuntozero", sans-serif;
+
             a {
                 color: $theme_color;
             }
@@ -128,6 +129,7 @@ img {
         .list-inline .list-inline-item {
             font-size: 13px;
             color: #777;
+
             i {
                 margin-right: 10px;
                 color: $theme_color_two;
@@ -399,7 +401,7 @@ img {
                     position: absolute;
                     width: 100%;
                     left: 0;
-                    top: 70px;
+                    top: 60px;
                     color: #000;
                     //z-index: 1000;
                     margin: 0;
@@ -1663,6 +1665,7 @@ img {
                 font: 700 22px "UTM-Duepuntozero", sans-serif;
 
             }
+
             .list-post .post-item {
                 margin-bottom: 30px;
                 @extend %widget-news-item;
@@ -1813,6 +1816,130 @@ img {
             }
         }
     }
+
+    .contact-wrap {
+        .about-us {
+            padding: 60px 0;
+
+            .text {
+                z-index: 1;
+
+                .inner {
+                    padding: 80px 40px;
+                    @include prefix((box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, .5)), webkit moz);
+
+                    .h2, .h3 {
+                        font-weight: 700;
+                        color: $theme_color;
+                        text-transform: uppercase;
+                    }
+
+                    .h2 {
+                        font-size: 44px;
+                    }
+
+                    .h3 {
+                        font-size: 30px;
+                    }
+
+                    .desc {
+                        text-align: justify;
+
+                        p.lead {
+                            font-weight: 700;
+                            font-size: 16px;
+                            color: $theme_color;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+
+        .address {
+            border-right: 1px solid #fcd3e1;
+            margin-bottom: 100px;
+
+            .row-address {
+                color: #7a7992;
+                font-size: 13px;
+                padding: 40px 0;
+                border-bottom: 1px solid #fcd3e1;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+            }
+
+            .title, .info > .h6, i.fas {
+                color: $theme_color;
+            }
+
+            .title {
+                font: 700 30px "UTM-Duepuntozero", sans-serif;
+                margin-bottom: 45px;
+                text-align: center;
+            }
+
+            .info {
+                > .h6 {
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+
+                p {
+                    margin-bottom: 10px;
+
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        font-weight: 600;
+                        color: $theme_color_two;
+                    }
+                }
+
+                ul li {
+                    &.lead.h6 {
+                        font-size: 24px;
+                        color: #7a7992;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                a.btn {
+                    display: inline-block;
+                    background-color: $theme_color_two;
+                    color: #fff;
+                    margin-top: 10px;
+                    @include prefix((box-shadow: 0px 2px 6px rgba(0, 0, 0, .3)), webkit moz);
+
+                    &.btn-hotline {
+                        font-size: 14px;
+
+                        > i.fas {
+                            color: #fff;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    &.btn-regis {
+                        background: $theme_color_two url("../img/edit.png") 10px center/26px no-repeat;
+                        padding-left: 40px;
+                        margin-left: 20px;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #footer {
@@ -1919,5 +2046,15 @@ img {
         padding: 25px 0;
         color: #fff;
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    %section {
+        padding: 30px 0;
+    }
+    %title {
+        font-size: 36px;
+        margin-bottom: 20px ;
     }
 }

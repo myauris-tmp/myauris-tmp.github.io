@@ -1,4 +1,6 @@
 $(function () {
+    moveFbPagePlugin();
+
     // Image lazy load
     lozad(".lozad", {
         rootMargin: "300px 0px",
@@ -41,11 +43,15 @@ $(function () {
 
     $('#site-wrap').css('padding-top', heightHeader);
     $(window).resize(function () {
+        moveFbPagePlugin();
+
         var heightHeader = header.height();
         $('#site-wrap').css('padding-top', heightHeader);
     });
 
     $(window).ready(function () {
+        moveFbPagePlugin();
+
         var heightHeader = header.height();
         $('#site-wrap').css('padding-top', heightHeader);
     });
@@ -92,12 +98,6 @@ $(function () {
         navSpeed: 900,
         margin: 30,
         autoplayHoverPause: true,
-        responsive: {
-            0: {items: 1},
-            600: {items: 2},
-            1024: {items: 3},
-            1300: {items: 3}
-        },
         onInitialized: function () {
             var firstEl = $('.owl-kols').find('.owl-item.active').eq(0);
             var text = firstEl.find('.text').data('text');
@@ -107,7 +107,13 @@ $(function () {
             var firstEl = $('.owl-kols').find('.owl-item.active').eq(1);
             var text = firstEl.find('.text').data('text');
             $('.home-kols').find('.kol-text').html(text);
-        }
+        },
+        responsive: {
+            0: {items: 1},
+            600: {items: 2},
+            1024: {items: 3},
+            1300: {items: 3}
+        },
     });
 
     $('.testimonial-text').hide();
@@ -186,8 +192,11 @@ $(function () {
         autoplayHoverPause: true,
         center: true,
         responsive: {
-            0: {items: 1},
-            600: {items: 2},
+            0: {
+                items: 3,
+                margin: 15
+            },
+            600: {items: 3},
             1024: {items: 3},
             1300: {items: 5}
         },
@@ -280,4 +289,13 @@ $(function () {
         }
         return false;
     });
+
+    function moveFbPagePlugin() {
+        var screenWidth = $(window).width();
+        if (screenWidth > 768 || screenWidth < 576) {
+            $('.facebook-page').appendTo('.fb-page-plugin-desktop');
+        } else {
+            $('.facebook-page').appendTo('.fb-page-plugin-mobile');
+        }
+    }
 })

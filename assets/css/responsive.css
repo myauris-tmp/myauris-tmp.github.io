@@ -114,6 +114,11 @@
   .page-breadcrumb h1 {
     font-size: 46px; }
 
+  #nav-mobile .mm-navbars_top .mm-navbar img {
+    max-height: 48px;
+    padding: 0;
+    margin: 12px auto !important; }
+
   #header .header-top .container {
     display: none; }
 
@@ -123,7 +128,9 @@
 
   #footer .footer-top .col-left {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+  #footer .footer-middle .footer-menu {
+    margin-top: 15px; } }
 @media only screen and (max-width: 480px) {
   .page-breadcrumb:before {
     content: "";
@@ -150,12 +157,37 @@
     padding-bottom: 30px; }
   #main .home-customers .owl-customers .customer-inner {
     margin: 0 15px; }
+  #main .services-wrap .services .nav .nav-item {
+    text-align: left !important; }
+    #main .services-wrap .services .nav .nav-item .nav-link {
+      padding-left: 0;
+      margin-bottom: 15px; }
+      #main .services-wrap .services .nav .nav-item .nav-link h5 {
+        margin: 0; }
+      #main .services-wrap .services .nav .nav-item .nav-link img {
+        margin: 0 10px 0 0;
+        float: left;
+        max-width: 20px; }
+  #main .services-wrap .services .tab-content {
+    padding-top: 20px; }
+    #main .services-wrap .services .tab-content .inner {
+      margin-bottom: 20px; }
+      #main .services-wrap .services .tab-content .inner .title {
+        margin-bottom: 15px; }
+  #main .customers-wrap .thumbnail {
+    padding-top: 0; }
+  #main .left-sidebar {
+    margin-bottom: 30px; }
 
   #footer .footer-middle {
     padding: 30px 0; }
     #footer .footer-middle .footer-info .info, #footer .footer-middle .footer-info .social {
       max-width: 100%; }
     #footer .footer-middle .footer-nav {
-      margin-top: 15px; } }
+      margin-top: 15px; }
+      #footer .footer-middle .footer-nav .col-md-4 {
+        margin-bottom: 20px; }
+        #footer .footer-middle .footer-nav .col-md-4 .title {
+          margin-bottom: 10px; } }
 
 /*# sourceMappingURL=responsive.css.map */
