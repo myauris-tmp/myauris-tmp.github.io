@@ -264,7 +264,7 @@ $(function () {
 
     if (![null, undefined].includes(active) && active.length > 0) {
         var li = active.closest('li') || null;
-        while (![null, undefined].includes(li) && li.length > 0) {
+        while (![null, undefined].includes(li) && li.length > 0 ) {
             li.children('ul').slideDown(500);
             li.addClass('open').children('ul').slideDown(500);
             li = li.parents('li') || null;
